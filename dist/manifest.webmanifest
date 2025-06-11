@@ -1,0 +1,1 @@
+{"name":"FakeStore PWA","short_name":"FakeStore","description":"Loja Fake como PWA","start_url":"/","display":"standalone","background_color":"#ffffff","theme_color":"#1976d2","lang":"en","scope":"/","icons":[{"src":"pwa-icon-192.png","sizes":"192x192","type":"image/png"},{"src":"pwa-icon-512.png","sizes":"512x512","type":"image/png"}]}
