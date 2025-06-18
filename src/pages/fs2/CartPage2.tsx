@@ -10,10 +10,10 @@ import {
   Snackbar,
   Alert,
 } from "@mui/material";
-import { useCart } from "../contexts/CartContext";
+import { useCart } from "../../contexts/CartContext";
 import { useNavigate } from "react-router-dom";
 
-const CartPage: React.FC = () => {
+const CartPage2: React.FC = () => {
   const { cart, removeFromCart, clearCart } = useCart();
   const navigate = useNavigate();
   const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -36,7 +36,7 @@ const CartPage: React.FC = () => {
     }
     setOpenSnackbar(false);
     clearCart();
-    navigate("/products");
+    navigate("/products2");
   };
 
   return (
@@ -110,4 +110,4 @@ const CartPage: React.FC = () => {
   );
 };
 
-export default CartPage;
+export default CartPage2;

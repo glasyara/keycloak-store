@@ -12,7 +12,7 @@ import {
 import StarIcon from "@mui/icons-material/Star";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useTheme } from "@mui/material/styles";
-import { useCart } from "../contexts/CartContext";
+import { useCart } from "../../contexts/CartContext";
 
 interface Product {
   id: number;
@@ -23,7 +23,7 @@ interface Product {
   image: string;
 }
 
-const ProductDetails: React.FC = () => {
+const ProductDetails2: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
@@ -73,7 +73,7 @@ const ProductDetails: React.FC = () => {
       <Box sx={{ display: "flex", alignItems: "center", px: 2, pt: 2 }}>
         <IconButton
           onClick={() => {
-            navigate("/products");
+            navigate("/products2");
           }}
           sx={{ color: "#fff" }}
         >
@@ -169,4 +169,4 @@ const ProductDetails: React.FC = () => {
   );
 };
 
-export default ProductDetails;
+export default ProductDetails2;

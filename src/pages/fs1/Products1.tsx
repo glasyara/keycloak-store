@@ -13,7 +13,7 @@ import {
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import StarIcon from "@mui/icons-material/Star";
 import { useNavigate } from "react-router-dom";
-import keycloak from '../contexts/Keycloak'; // adjust the path if needed
+import keycloak from '../../contexts/Keycloak'; // adjust the path if needed
 
 
 interface Product {
@@ -25,7 +25,7 @@ interface Product {
   image: string;
 }
 
-const Products: React.FC = () => {
+const Products1: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
@@ -61,9 +61,8 @@ const Products: React.FC = () => {
       {/* Top Navigation */}
       <Box sx={{ display: "flex", alignItems: "center", px: 2, pt: 2 }}>
         <IconButton
-          onClick={() => {
-          localStorage.removeItem("token"); 
-          keycloak.logout();              
+          onClick={() => {; 
+          navigate("/");              
         }}
   sx={{ color: "#fff" }}
 >
@@ -139,7 +138,7 @@ const Products: React.FC = () => {
                   transform: "scale(1.05)",
                 },
           }}
-      onClick={() => navigate(`/products/${product.id}`)}>
+      onClick={() => navigate(`/products1/${product.id}`)}>
     <Avatar
       variant="rounded"
       src={product.image}
@@ -162,4 +161,4 @@ const Products: React.FC = () => {
   );
 };
 
-export default Products;
+export default Products1;

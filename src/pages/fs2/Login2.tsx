@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const LoginPage: React.FC = () => {
+const Login2: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const LoginPage: React.FC = () => {
         const data = await res.json();
         if (data.token) {
           localStorage.setItem('token', data.token);
-          navigate('/products');
+          navigate('/products2');
         } else {
           console.error('Login failed:', data);
           alert('Falha no login automático');
@@ -36,4 +36,4 @@ const LoginPage: React.FC = () => {
   return null; // nothing to show, just auto-login
 };
 
-export default LoginPage;
+export default Login2;
